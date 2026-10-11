@@ -14,6 +14,7 @@ import Contact from './Pages/Contact';
 import { BorderBeam } from "@/Components/UI/border-beam";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import ProjectInfo from './Pages/ProjectInfo';
+import PageTransition from './Animations/PageTransitions';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, Flip);
 
 const App = () => {
@@ -36,6 +37,8 @@ const App = () => {
   return (
 
     <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <PageTransition />
+
       <Cursor />
 
       {/* Navbar lives OUTSIDE smooth-wrapper */}
@@ -51,7 +54,6 @@ const App = () => {
           />
         </div>
       </div>
-
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Routes>
