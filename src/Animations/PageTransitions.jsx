@@ -39,7 +39,7 @@ const PageTransition = () => {
     return (
         <div
             ref={overlayRef}
-            className="fixed inset-0 z-[100] bg-orange-500 pointer-events-none invisible"
+            className="fixed inset-0 z-100 bg-orange-500 pointer-events-none invisible"
             aria-hidden="true"
         />
     );
